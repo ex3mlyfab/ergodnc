@@ -21,6 +21,10 @@ class Office extends Model
         'price_per_day' => 'integer',
         'monthly_discount' => 'integer',
     ];
+    const APPROVAL_PENDING= 1;
+    const APPROVAL_APPROVED= 2;
+    const APPROVAL_REJECTED= 3;
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
